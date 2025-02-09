@@ -11,7 +11,7 @@ app.use(express.json());
 async function startApp () {
 		try {
 				await CONNECT_DB();
-				app.listen(port, () => console.log(`Server started on port ${port}`));
+				app.listen(port, () => console.log(`Server started`));
 		} catch ( error ) {
 				console.error("MongoDB connection error:", error.message);
 		}
