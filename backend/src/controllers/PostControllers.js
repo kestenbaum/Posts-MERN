@@ -48,7 +48,7 @@ export const updatePostController = async (req, res) => {
 				
 				const post = await updatePostById(id, data);
 				if (!post) {
-						return res.status(404).json({ message: "No post found to update" });
+						return res.status(400).json({ message: "No post found to update" });
 				}
 				return res.status(200).json(post);
 		} catch (error) {
